@@ -1,0 +1,58 @@
+{
+  "name": "@pown/smuggler",
+  "version": "2.0.0",
+  "description": "Pownage guaranteed",
+  "main": "lib/index.js",
+  "scripts": {
+    "smuggler": "POWN_ROOT=. pown-cli smuggler",
+    "usage": "POWN_ROOT=. pown-cli smuggler --help",
+    "build": "true",
+    "test": "true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pownjs/pown-smuggler.git"
+  },
+  "keywords": [
+    "exploit",
+    "framework"
+  ],
+  "author": "pdp <pdp@gnucitizen.org>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pownjs/pown-smuggler/issues"
+  },
+  "homepage": "https://github.com/pownjs/pown-smuggler#readme",
+  "peerDependencies": {
+    "@pown/async": "^2.11.0",
+    "@pown/cli": "^2.29.0",
+    "@pown/http": "^2.2.0",
+    "@pown/request": "^2.25.0"
+  },
+  "devDependencies": {
+    "@pown/async": "^2.11.0",
+    "@pown/cli": "^2.29.0",
+    "@pown/http": "^2.2.0",
+    "@pown/request": "^2.25.0",
+    "@pown/toolchain": "^2.1.0"
+  },
+  "dependencies": {
+    "@pown/connect": "^2.0.1"
+  },
+  "pown": {
+    "commands": [
+      "commands/smuggler"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "extends": "./.babelrc"
+        }
+      ]
+    ]
+  }
+}
